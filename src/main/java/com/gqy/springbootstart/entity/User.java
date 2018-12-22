@@ -3,6 +3,7 @@ package com.gqy.springbootstart.entity;
 public class User {
     private int id;
     private String name;
+
     private int age;
 
     public User() {
