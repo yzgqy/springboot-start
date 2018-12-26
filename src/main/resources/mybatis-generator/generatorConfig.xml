@@ -40,7 +40,7 @@
         </commentGenerator>
 
         <!-- jdbc连接 -->
-        <jdbcConnection driverClass="${jdbc_driver}" connectionURL="${jdbc_url}" UserId="${jdbc_User}" password="${jdbc_password}" />
+        <jdbcConnection driverClass="${jdbc_driver}" connectionURL="${jdbc_url}" userId="${jdbc_User}" password="${jdbc_password}" />
         <!-- 类型转换 -->
         <javaTypeResolver>
             <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
@@ -59,9 +59,9 @@
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
         <!-- 生成mapxml对应User，也就是接口dao -->
-        <javaUserGenerator targetPackage="${dao_package}" targetProject="${project}" type="XMLMAPPER" >
+        <javaClientGenerator targetPackage="${dao_package}" targetProject="${project}" type="XMLMAPPER" >
             <property name="enableSubPackages" value="false" />
-        </javaUserGenerator>
+        </javaClientGenerator>
 
         <!-- table可以有多个,每个数据库中的表都可以写一个table，tableName表示要匹配的数据库表,也可以在tableName属性中通过使用%通配符来匹配所有数据库表,只有匹配的表才会自动生成文件 -->
         <table tableName="classnode" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">
